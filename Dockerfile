@@ -7,4 +7,7 @@ RUN set -ex \
 	&& pip install pyyaml==3.13 \
 	&& pip install xlrd==1.1.0 \
 	&& pip install xlwt==1.3.0 \
-	&& pip install schedule==0.5.0
+	&& pip install schedule==0.5.0 \
+RUN apk --no-cache add tzdata  && \
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone

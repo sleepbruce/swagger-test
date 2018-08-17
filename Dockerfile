@@ -10,4 +10,4 @@ RUN set -ex \
 	&& pip install schedule==0.5.0 \
 	&& apk --no-cache add tzdata \
 	&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-        && echo "Asia/Shanghai" > /etc/timezone
+	&& echo "Asia/Shanghai" > /etc/timezone

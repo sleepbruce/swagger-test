@@ -1,4 +1,5 @@
 FROM python:3.6.6-alpine3.7
+COPY prepare.sh /usr/local/bin
 RUN set -ex \
 	&& apk add gcc g++ \
 	&& pip install requests==2.18.4 \
@@ -13,4 +14,5 @@ RUN set -ex \
 	&& pip install numpy==1.15.4 \
 	&& apk --no-cache add tzdata \
 	&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-	&& echo "Asia/Shanghai" > /etc/timezone
+	&& echo "Asia/Shanghai" > /etc/timezone \
+	&& prepare.sh

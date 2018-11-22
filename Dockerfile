@@ -15,5 +15,5 @@ RUN set -ex \
 	&& apk --no-cache add tzdata \
 	&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 	&& echo "Asia/Shanghai" > /etc/timezone \
-	&& chmod 777 /usr/local/bin/prepare.sh
+	&& chmod 777 /usr/local/bin/prepare.sh \
 	&& prepare.sh

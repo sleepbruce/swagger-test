@@ -1,4 +1,4 @@
-FROM python:3.6.6-alpine3.7
+FROM python:3.6.6-alpine3.8
 COPY prepare.sh /usr/local/bin
 RUN set -ex \
 	&& apk add g++ \

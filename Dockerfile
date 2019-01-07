@@ -14,6 +14,4 @@ RUN set -ex \
 	&& pip install numpy==1.15.4 \
 	&& apk --no-cache add tzdata \
 	&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-	&& echo "Asia/Shanghai" > /etc/timezone \
-	&& chmod 777 /usr/local/bin/prepare.sh \
-	&& prepare.sh
+	&& echo "Asia/Shanghai" > /etc/timezone

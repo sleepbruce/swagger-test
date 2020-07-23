@@ -14,6 +14,7 @@ RUN set -ex \
 	&& pip install numpy==1.15.4 \
 	&& pip install Flask-Login==0.5.0 \
 	&& pip install pycryptodome==3.9.9 \
+	&& pip install PyCrypto \
 	&& apk --no-cache add tzdata \
 	&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 	&& echo "Asia/Shanghai" > /etc/timezone \

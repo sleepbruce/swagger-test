@@ -1,7 +1,7 @@
 FROM python:3.6.6-alpine3.8
 COPY prepare.sh /usr/local/bin
 RUN set -ex \
-	&& apk add g++ libssl-dev libbz2-dev libjpeg-dev zlib1g-dev \
+	&& apk add g++ libssl-dev libbz2-dev jpeg-dev zlib1g-dev \
 	&& pip install requests==2.18.4 \
 	&& pip install flask==1.0.2 \
 	&& pip install flask_cors==3.0.6 \
